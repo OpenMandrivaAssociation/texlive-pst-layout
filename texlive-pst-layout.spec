@@ -31,6 +31,7 @@ package pst-node and some other pstricks-related material.
 %doc %{_texmfdistdir}/doc/generic/pst-layout/doc/latex/pst-layout/pst-layout-doc.pdf
 %doc %{_texmfdistdir}/doc/generic/pst-layout/doc/latex/pst-layout/pst-layout-doc.tex
 %doc %{_texmfdistdir}/doc/generic/pst-layout/tex/latex/pst-layout/pst-layout.sty
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -41,3 +42,5 @@ package pst-node and some other pstricks-related material.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}

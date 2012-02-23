@@ -1,12 +1,12 @@
-# revision 22586
+# revision 25467
 # category Package
 # catalog-ctan /graphics/pstricks/contrib/pst-layout
-# catalog-date 2011-05-23 11:13:27 +0200
+# catalog-date 2011-05-27 12:35:46 +0200
 # catalog-license lppl
 # catalog-version .95
 Name:		texlive-pst-layout
 Version:	.95
-Release:	2
+Release:	3
 Summary:	Page layout macros based on PStricks packages
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-layout
@@ -16,6 +16,7 @@ Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-layout.doc.ta
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
+Requires(post):	texlive-kpathsea
 
 %description
 The package provides a means of creating elaborate ("pseudo-
@@ -23,12 +24,20 @@ tabular") layouts of material, typically to be overlaid on an
 included graphic. The package requires a recent version of the
 package pst-node and some other pstricks-related material.
 
+%post
+    %{_sbindir}/texlive.post
+
+%postun
+    if [ $1 -eq 0 ]; then
+	%{_sbindir}/texlive.post
+    fi
+
 #-----------------------------------------------------------------------
 %files
-%doc %{_texmfdistdir}/doc/generic/pst-layout/doc/latex/pst-layout/README
-%doc %{_texmfdistdir}/doc/generic/pst-layout/doc/latex/pst-layout/pst-layout-doc.pdf
-%doc %{_texmfdistdir}/doc/generic/pst-layout/doc/latex/pst-layout/pst-layout-doc.tex
-%doc %{_texmfdistdir}/doc/generic/pst-layout/tex/latex/pst-layout/pst-layout.sty
+%{_texmfdistdir}/tex/latex/pst-layout/pst-layout.sty
+%doc %{_texmfdistdir}/doc/latex/pst-layout/README
+%doc %{_texmfdistdir}/doc/latex/pst-layout/pst-layout-doc.pdf
+%doc %{_texmfdistdir}/doc/latex/pst-layout/pst-layout-doc.tex
 
 #-----------------------------------------------------------------------
 %prep
@@ -38,4 +47,4 @@ package pst-node and some other pstricks-related material.
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar doc %{buildroot}%{_texmfdistdir}
+cp -fpar tex doc %{buildroot}%{_texmfdistdir}

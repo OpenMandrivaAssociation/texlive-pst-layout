@@ -48,3 +48,21 @@ package pst-node and some other pstricks-related material.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Thu Feb 23 2012 Paulo Andrade <pcpa@mandriva.com.br> .95-3
++ Revision: 779620
+- Update to latest release.
+
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> .95-2
++ Revision: 755320
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> .95-1
++ Revision: 719364
+- texlive-pst-layout
+- texlive-pst-layout
+- texlive-pst-layout
+- texlive-pst-layout
+

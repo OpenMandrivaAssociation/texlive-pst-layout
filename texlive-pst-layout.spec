@@ -6,7 +6,7 @@
 # catalog-version .95
 Name:		texlive-pst-layout
 Version:	0.95
-Release:	4
+Release:	5
 Summary:	Page layout macros based on PStricks packages
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-layout

@@ -1,9 +1,3 @@
-# revision 29803
-# category Package
-# catalog-ctan /graphics/pstricks/contrib/pst-layout
-# catalog-date 2012-04-27 12:45:13 +0200
-# catalog-license lppl
-# catalog-version .95
 Name:		texlive-pst-layout
 Version:	.95
 Release:	1
@@ -34,10 +28,8 @@ package pst-node and some other pstricks-related material.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/latex/pst-layout/pst-layout.sty
-%doc %{_texmfdistdir}/doc/latex/pst-layout/README
-%doc %{_texmfdistdir}/doc/latex/pst-layout/pst-layout-doc.pdf
-%doc %{_texmfdistdir}/doc/latex/pst-layout/pst-layout-doc.tex
+%{_texmfdistdir}/tex/latex/pst-layout
+%doc %{_texmfdistdir}/doc/latex/pst-layout
 
 #-----------------------------------------------------------------------
 %prep

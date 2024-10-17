@@ -3,7 +3,7 @@ Version:	29803
 Release:	2
 Summary:	Page layout macros based on PStricks packages
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-layout
+URL:		https://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-layout
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-layout.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-layout.doc.r%{version}.tar.xz
